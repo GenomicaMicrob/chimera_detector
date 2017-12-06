@@ -2,7 +2,7 @@
 A simple script to detect chimeric sequences in 16S/18S metagenomic samples.
 
 ## Release
-[chimera_detector.v0.1.1](https://github.com/GenomicaMicrob/chimera_detector/releases/download/v0.1.0/chimera_detector.v0.1.1.sh)
+[chimera_detector.v0.1.1](https://github.com/GenomicaMicrob/chimera_detector/releases/download/0.1.1/chimera_detector.v0.1.1.sh)
 
 ## Information
 
@@ -19,7 +19,7 @@ Two basic approaches are taken to identify these chimeric sequences, a database-
 This shell script (bash) was tested in linux Ubuntu.
 
 ## Installation
-1. Download the [latest](https://github.com/GenomicaMicrob/chimera_detector/releases/latest) release to any directory: `wget https://github.com/GenomicaMicrob/chimera_detector/releases/download/v0.1.0/chimera_detector.v0.1.1.sh` (check the version number)
+1. Download the [latest](https://github.com/GenomicaMicrob/chimera_detector/releases/latest) release to any directory: `wget https://github.com/GenomicaMicrob/chimera_detector/releases/download/0.1.1/chimera_detector.v0.1.1.sh` (check the version number)
 2. Make the script executable: `chmod +x chimera_detector.v0.1.1.sh`
 3. Download the databases from [figshare](https://figshare.com/account/projects/20254/articles/4829176): `wget https://ndownloader.figshare.com/files/8011024` Since the databases are quite big (613 Mb) it might take a while to download. The four databases are compressed into one file.
 4. Rename the file, Figshare assigns just a number to the downloaded file, so it is best to give it a meaningful name.: `mv 8011024 mg_pipeline_dbs.tar.gz` 
