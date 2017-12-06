@@ -1,6 +1,11 @@
 # chimera_detector
 A simple script to detect chimeric sequences in 16S/18S metagenomic samples.
 
+## Release
+[chimera_detector.v0.1.1](https://github.com/GenomicaMicrob/chimera_detector/releases/download/v0.1.0/chimera_detector.v0.1.1.sh)
+
+## Information
+
 This script is part of a metagenomic [pipeline](https://github.com/GenomicaMicrob/metagenomic_pipeline) we use at our lab to analyse metagenomic fingerprinting Illumina sequences.
 
 NGS 16S or 18S metagenomic sequences sometimes have chimeric sequences produced during the PCR amplification of the samples. These sequences have to be identified and remove from the samples in order to have a more faithfull representation of the diversity present.
@@ -14,13 +19,14 @@ Two basic approaches are taken to identify these chimeric sequences, a database-
 This shell script (bash) was tested in linux Ubuntu.
 
 ## Installation
-1. Download the latest release to any directory
-2. Make the script executable: `chmod +x chimera_detector.vX.X.X` (vX.X.X corresponds to the number of the latest release)
-3. Download the databases from [figshare](https://figshare.com/account/projects/20254/articles/4829176)
-4. Uncompress them: `tar xzf mgclassifier_dbs.tar.gz`
-5. Create an appropiate directory to house the script and databases: `sudo mkdir /opt/mg_pipeline/scripts /opt/mg_pipeline/databases` for this you'll have to be a super user with `sudo`. You can use a different directory, but the script points to this one, you'll have also to correct the script to point to the other directory.
-6. Move everything to their appropiate directories: `sudo mv chimera_detector... /opt/mg_pipeline/scripts && sudo mv *.fasta /opt/mg_pipeline/databases`
-7. For easier running of the script from any folder, make a symbolic link: `sudo ln -s /opt/mg_pipeline/scripts/chimera_detector.vX.X.X /usr/bin/chimera_detector`
+1. Download the [latest](https://github.com/GenomicaMicrob/chimera_detector/releases/latest) release to any directory: `wget https://github.com/GenomicaMicrob/chimera_detector/releases/download/v0.1.0/chimera_detector.v0.1.1.sh` (check the version number)
+2. Make the script executable: `chmod +x chimera_detector.v0.1.1.sh`
+3. Download the databases from [figshare](https://figshare.com/account/projects/20254/articles/4829176): `wget https://ndownloader.figshare.com/files/8011024` Since the databases are quite big (613 Mb) it might take a while to download. The four databases are compressed into one file.
+4. Rename the file, Figshare assigns just a number to the downloaded file, so it is best to give it a meaningful name.: `mv 8011024 mg_pipeline_dbs.tar.gz` 
+5. Uncompress them: `tar xzf mg_pipeline_dbs.tar.gz`
+6. Create an appropiate directory to house the script and databases: `sudo mkdir /opt/mg_pipeline/ /opt/mg_pipeline/databases` for this you'll have to be a super user with `sudo`. You can use a different directory, but the script points to this one, you'll have also to correct the script to point to the other directory.
+7. Move everything to their appropiate directories: `sudo mv chimera_detector.v0.1.1.sh /opt/mg_pipeline/ && sudo mv *.fasta /opt/mg_pipeline/databases`
+8. For easier running of the script from any folder, make a symbolic link: `sudo ln -s /opt/mg_pipeline/chimera_detector.v0.1.1.sh /usr/bin/chimera_detector`
 
 ## Usage
 From the directory where your files reside, type `chimera_detector *.fasta`
