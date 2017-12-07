@@ -14,14 +14,14 @@ Two basic approaches are taken to identify these chimeric sequences, a database-
 
 ## Dependencies
 - [vsearch](https://github.com/torognes/vsearch), please make sure to install it first.
-- a database(s)
+- a [database(s)](https://github.com/GenomicaMicrob/metagenomic_pipeline/blob/master/databases.md)
 
 This shell script (bash) was tested in linux Ubuntu.
 
 ## Installation
 1. Download the [latest](https://github.com/GenomicaMicrob/chimera_detector/releases/latest) release to any directory: `wget https://github.com/GenomicaMicrob/chimera_detector/releases/download/v0.1.1/chimera_detector.v0.1.1.sh` (check the version number)
 2. Make the script executable: `chmod +x chimera_detector.v0.1.1.sh`
-3. Download the databases from [figshare](https://figshare.com/articles/mg_pipeline_databases/5675242): `wget https://ndownloader.figshare.com/files/9924862` Since the databases are quite big (613 Mb) it might take a while to download. The four databases are compressed into one file.
+3. Download the databases from [figshare](https://figshare.com/articles/mg_pipeline_databases/5675242): `wget https://ndownloader.figshare.com/files/9924862` Since the databases are quite big (584 Mb) it might take a while to download. The four databases are compressed into one file.
 4. Rename the file, Figshare assigns just a number to the downloaded file, so it is best to give it a meaningful name.: `mv 9924862 mg_pipeline_dbs.tar.gz` 
 5. Uncompress them: `tar xzf mg_pipeline_dbs.tar.gz`
 6. Create an appropiate directory to house the script and databases: `sudo mkdir /opt/mg_pipeline/ /opt/mg_pipeline/databases` for this you'll have to be a super user with `sudo`. You can use a different directory, but the script points to this one, you'll have also to correct the script to point to the other directory.
