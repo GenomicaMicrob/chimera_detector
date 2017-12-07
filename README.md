@@ -21,8 +21,8 @@ This shell script (bash) was tested in linux Ubuntu.
 ## Installation
 1. Download the [latest](https://github.com/GenomicaMicrob/chimera_detector/releases/latest) release to any directory: `wget https://github.com/GenomicaMicrob/chimera_detector/releases/download/v0.1.1/chimera_detector.v0.1.1.sh` (check the version number)
 2. Make the script executable: `chmod +x chimera_detector.v0.1.1.sh`
-3. Download the databases from [figshare](https://figshare.com/account/projects/20254/articles/4829176): `wget https://ndownloader.figshare.com/files/8011024` Since the databases are quite big (613 Mb) it might take a while to download. The four databases are compressed into one file.
-4. Rename the file, Figshare assigns just a number to the downloaded file, so it is best to give it a meaningful name.: `mv 8011024 mg_pipeline_dbs.tar.gz` 
+3. Download the databases from [figshare](https://figshare.com/articles/mg_pipeline_databases/5675242): `wget https://ndownloader.figshare.com/files/9924862` Since the databases are quite big (613 Mb) it might take a while to download. The four databases are compressed into one file.
+4. Rename the file, Figshare assigns just a number to the downloaded file, so it is best to give it a meaningful name.: `mv 9924862 mg_pipeline_dbs.tar.gz` 
 5. Uncompress them: `tar xzf mg_pipeline_dbs.tar.gz`
 6. Create an appropiate directory to house the script and databases: `sudo mkdir /opt/mg_pipeline/ /opt/mg_pipeline/databases` for this you'll have to be a super user with `sudo`. You can use a different directory, but the script points to this one, you'll have also to correct the script to point to the other directory.
 7. Move everything to their appropiate directories: `sudo mv chimera_detector.v0.1.1.sh /opt/mg_pipeline/ && sudo mv *.fasta /opt/mg_pipeline/databases`
